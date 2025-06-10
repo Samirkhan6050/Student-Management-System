@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Details Form</title>
+    <link rel="stylesheet" href="./home.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="header1">Student Details Form</h2>
+
+      <div class="success-message" id="successMessage">
+        Student details submitted successfully!
+      </div>
+
+      <div class="error-message" id="errorMessage">
+        Please fill in all required fields correctly.
+      </div>
+
+      <h3 class="header3">Instructions:</h3>
+      <ul>
+        <li>Enter your full name and your father's name.</li>
+        <li>Provide a valid email address.</li>
+        <li>Select your date of birth.</li>
+        <li>Enter your age in numbers.</li>
+        <li>Select your gender.</li>
+        <li>Choose your subject from the dropdown menu.</li>
+        <li>Write a short description about yourself.</li>
+        <li>
+          Click "Submit Now" to send your details or "Reset Now" to clear the
+          form.
+        </li>
+      </ul>
+
+      <div class="formDiv">
+        <form id="studentForm">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <br />
+          <div>
+            <label for="fname">Father's Name:</label>
+            <input type="text" id="fname" name="fname" required />
+          </div>
+          <br />
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <br />
+          <div>
+            <label for="date">Date of Birth:</label>
+            <input type="date" id="date" name="dob" required />
+          </div>
+          <br />
+          <div>
+            <label for="age">Age:</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="1"
+              max="120"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" required />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label>
+          </div>
+          <br />
+          <div>
+            <label for="subject">Subject:</label>
+            <select name="subject" id="subject" required>
+              <option value="">Select an option</option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Physics">Physics</option>
+              <option value="Computer Engineering">Computer Engineering</option>
+              <option value="Electrical Engineering">
+                Electrical Engineering
+              </option>
+              <option value="Pharmacy">Pharmacy</option>
+              <option value="MBBS">MBBS</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <br />
+          <div>
+            <label for="about">Write about yourself:</label><br />
+            <textarea
+              id="about"
+              name="about"
+              cols="30"
+              rows="5"
+              placeholder="Tell us about yourself..."
+            ></textarea>
+          </div>
+          <br />
+          <div>
+            <input id="subBtn" type="submit" value="Submit Now" />
+            <input id="updateBtn" type="button" value="Update" />
+            <input id="resBtn" type="reset" value="Reset Now" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <br />
+    <hr />
+    <br />
+
+    <div class="tableDiv">
+      <h3 style="text-align: center; margin-bottom: 20px">
+        Submitted Student Details
+      </h3>
+      <table>
+        <thead>
+          <tr>
+            <th class="tableHead">SrNo</th>
+            <th class="tableHead">Name</th>
+            <th class="tableHead">Father's Name</th>
+            <th class="tableHead">DOB</th>
+            <th class="tableHead">Age</th>
+            <th class="tableHead">Gender</th>
+            <th class="tableHead">Email</th>
+            <th class="tableHead">Subject</th>
+            <th class="tableHead">Description</th>
+            <th class="tableHead">Action</th>
+          </tr>
+        </thead>
+        <tbody id="studentsTableBody">
+          <tr>
+            <td colspan="8" class="no-data">Loading student data...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./home.js"></script>
+  </body>
+</html>

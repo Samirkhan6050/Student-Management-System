@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "name": "rahman",
+    "fname": "arman",
+    "email": "samirkhan14a@gmail.com",
+    "dob": "2025-06-26",
+    "age": "15",
+    "gender": "Male",
+    "subject": "Computer Engineering",
+    "about": "Hello"
+  }
+]
